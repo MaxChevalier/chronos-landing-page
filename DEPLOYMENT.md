@@ -2,14 +2,13 @@
 
 ## 🚀 Plateforme
 
-**Vercel** (recommandé)
+**GitHub Pages** (gratuit)
 
 ---
 
 ## 📋 Prérequis
 
 - Compte GitHub avec le repository `chronos-landing-page`
-- Compte Vercel (gratuit)
 - Build fonctionnel en local (`npm run build`)
 
 ---
@@ -26,39 +25,37 @@ npm run build
 npm run preview
 ```
 
-### 2. Déployer sur Vercel
+### 2. Configurer GitHub Pages
 
 1. Pousser le projet sur GitHub
    ```bash
    git add .
-   git commit -m "chore: prepare for deployment"
+   git commit -m "chore: configure GitHub Pages deployment"
    git push origin main
    ```
 
-2. Se connecter à [vercel.com](https://vercel.com)
+2. Aller sur le repository GitHub : `github.com/MaxChevalier/chronos-landing-page`
 
-3. Cliquer sur **"Add New Project"**
+3. Cliquer sur **Settings** > **Pages**
 
-4. Importer le repository `MaxChevalier/chronos-landing-page`
+4. Dans **Source**, sélectionner **GitHub Actions**
 
-5. Configurer le projet :
-   - **Framework Preset** : Vite
-   - **Build Command** : `npm run build`
-   - **Output Directory** : `dist`
+5. Le workflow se lancera automatiquement à chaque push sur `main`
 
-6. Cliquer sur **"Deploy"**
+6. Attendre que le build soit terminé (voir onglet **Actions**)
 
 7. Récupérer l'URL publique
 
 ---
 
-## ⚙️ Variables d'environnement
+## ⚙️ Configuration technique
 
-Si nécessaire, ajouter dans Vercel Dashboard > Settings > Environment Variables :
+Le projet est configuré pour GitHub Pages :
 
-| Variable | Description |
-|----------|-------------|
-| `VITE_API_URL` | URL de l'API (si applicable) |
+| Fichier | Configuration |
+|---------|---------------|
+| `vite.config.ts` | `base: "/chronos-landing-page/"` en production |
+| `.github/workflows/deploy.yml` | Workflow GitHub Actions |
 
 ---
 
@@ -76,16 +73,17 @@ Si nécessaire, ajouter dans Vercel Dashboard > Settings > Environment Variables
 
 ## 🔄 Déploiement continu
 
-Vercel déploie automatiquement à chaque push sur `main`.
+GitHub Pages déploie automatiquement à chaque push sur `main`.
 
-- **Preview** : Chaque Pull Request génère une URL de preview
-- **Production** : Merge sur `main` déclenche le déploiement
+- **Workflow** : `.github/workflows/deploy.yml`
+- **Build** : `npm run build`
+- **Output** : `dist/`
 
 ---
 
 ## 🌍 URL de production
 
-**À renseigner ici** : `https://chronos-landing-page.vercel.app`
+**URL** : `https://maxchevalier.github.io/chronos-landing-page/`
 
 ---
 
@@ -93,6 +91,34 @@ Vercel déploie automatiquement à chaque push sur `main`.
 
 En cas de problème :
 
-1. Aller dans Vercel Dashboard > Deployments
-2. Sélectionner un déploiement précédent
-3. Cliquer sur **"Promote to Production"**
+1. Aller dans l'onglet **Actions** du repository
+2. Sélectionner le workflow **Deploy to GitHub Pages**
+3. Cliquer sur **Run workflow** avec un commit précédent
+
+Ou revenir à un commit antérieur :
+
+```bash
+git revert HEAD
+git push origin main
+```
+
+---
+
+## 🔧 Dépannage
+
+### Le site affiche une page blanche
+
+Vérifier que `base` est correctement configuré dans `vite.config.ts` :
+```typescript
+base: "/chronos-landing-page/"
+```
+
+### Les images ne s'affichent pas
+
+S'assurer que les chemins d'images utilisent des imports ou commencent par le bon chemin de base.
+
+### Le workflow échoue
+
+1. Vérifier l'onglet **Actions** pour les logs d'erreur
+2. S'assurer que les dépendances sont à jour
+3. Tester le build en local : `npm run build`
