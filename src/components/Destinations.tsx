@@ -4,27 +4,30 @@ import { Calendar, MapPin, Clock } from "lucide-react";
 const destinations = [
   {
     id: 1,
-    era: "Ancient Egypt",
-    year: "2500 BCE",
-    description: "Witness the construction of the Great Pyramids and walk among pharaohs.",
+    era: "Paris 1889",
+    year: "1889 CE",
+    description: "Witness the inauguration of the Eiffel Tower and immerse yourself in the Belle Époque.",
     duration: "7 Days",
-    image: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=800&q=80",
+    price: "2,500 ꝭ",
+    image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80",
   },
   {
     id: 2,
-    era: "Renaissance Florence",
-    year: "1492 CE",
-    description: "Meet Leonardo da Vinci and experience art's golden age firsthand.",
+    era: "Florence 1504",
+    year: "1504 CE",
+    description: "Meet Michelangelo as he unveils David and experience the Renaissance at its zenith.",
     duration: "5 Days",
+    price: "3,200 ꝭ",
     image: "https://images.unsplash.com/photo-1543429258-c5ca3ea3f617?w=800&q=80",
   },
   {
     id: 3,
-    era: "Future Tokyo",
-    year: "2150 CE",
-    description: "Explore the neon-lit megacity where humanity touches the stars.",
+    era: "Crétacé",
+    year: "66 Million BCE",
+    description: "Explore the age of dinosaurs in complete safety with our temporal shield technology.",
     duration: "10 Days",
-    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
+    price: "8,900 ꝭ",
+    image: "https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=800&q=80",
   },
 ];
 
@@ -83,6 +86,8 @@ const Destinations = () => {
             <motion.div
               key={destination.id}
               variants={cardVariants}
+              whileHover={{ scale: 1.05, y: -10 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="card-luxury group cursor-pointer overflow-hidden"
             >
               {/* Image */}
@@ -108,6 +113,12 @@ const Destinations = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {destination.description}
                 </p>
+
+                {/* Price */}
+                <div className="mb-4">
+                  <span className="text-gold text-2xl font-semibold">{destination.price}</span>
+                  <span className="text-muted-foreground text-sm ml-2">per person</span>
+                </div>
 
                 {/* Meta Info */}
                 <div className="flex items-center gap-6 text-sm text-muted-foreground">

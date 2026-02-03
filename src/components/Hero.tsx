@@ -3,6 +3,13 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-timetravel.jpg";
 
 const Hero = () => {
+  const scrollToDestinations = () => {
+    const destinationsSection = document.getElementById('destinations');
+    if (destinationsSection) {
+      destinationsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -68,7 +75,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="btn-gold flex items-center gap-3 group">
+            <button 
+              onClick={scrollToDestinations}
+              className="btn-gold flex items-center gap-3 group"
+            >
               <span>Start Journey</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>

@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 /* TimeTravel Agency - Luxury Dark Theme with Gold Accents */
 
@@ -104,7 +104,8 @@
 
   .card-luxury {
     @apply bg-[hsl(var(--obsidian-light))] border border-[hsl(var(--border))] rounded-sm
-           hover:border-[hsl(var(--gold)_/_0.3)] transition-all duration-500;
+           hover:border-[hsl(var(--gold)_/_0.5)] transition-all duration-500
+           hover:shadow-[0_0_30px_hsl(43_74%_52%_/_0.2)];
   }
 
   .nav-link {
