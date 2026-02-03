@@ -1,73 +1,191 @@
-# Welcome to your Lovable project
+# ⏳ Chronos - Time Travel Agency Landing Page
 
-## Project info
+![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Chronos** est une landing page élégante et immersive pour une agence de voyage dans le temps fictive. Ce projet présente un design luxueux avec des animations fluides et une expérience utilisateur premium.
 
-## How can I edit this code?
+![Chronos Preview](https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80)
 
-There are several ways of editing your application.
+## ✨ Fonctionnalités
 
-**Use Lovable**
+- 🎨 **Design Premium** - Interface luxueuse avec une palette or et noir
+- 🌟 **Animations Fluides** - Utilisation de Framer Motion pour des transitions élégantes
+- 📱 **Responsive Design** - Adapté à tous les écrans (mobile, tablette, desktop)
+- 🧭 **Navigation Intuitive** - Navbar avec effet glass morphism au scroll
+- 🏛️ **Section Destinations** - Présentation des différentes époques à explorer
+- 🎯 **Composants UI** - Bibliothèque complète de composants shadcn/ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Stack Technique
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+| Technologie | Description |
+|-------------|-------------|
+| **React 18** | Bibliothèque UI avec hooks modernes |
+| **TypeScript** | Typage statique pour un code robuste |
+| **Vite** | Build tool ultra-rapide |
+| **TailwindCSS** | Framework CSS utility-first |
+| **Framer Motion** | Bibliothèque d'animations |
+| **shadcn/ui** | Composants UI accessibles et personnalisables |
+| **React Router** | Gestion du routing côté client |
+| **TanStack Query** | Gestion du state serveur |
 
-**Use your preferred IDE**
+### Outils de Développement
+| Outil | Description |
+|-------|-------------|
+| **ESLint** | Linting du code |
+| **Vitest** | Framework de tests |
+| **PostCSS** | Transformations CSS |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📁 Structure du Projet
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+chronos-landing-page/
+├── public/                  # Fichiers statiques
+├── src/
+│   ├── assets/             # Images et ressources
+│   ├── components/         # Composants React
+│   │   ├── ui/            # Composants shadcn/ui
+│   │   ├── Navbar.tsx     # Barre de navigation
+│   │   ├── Hero.tsx       # Section héro principale
+│   │   ├── Destinations.tsx # Grille des destinations
+│   │   └── Footer.tsx     # Pied de page
+│   ├── hooks/              # Hooks personnalisés
+│   ├── lib/                # Utilitaires
+│   ├── pages/              # Pages de l'application
+│   │   ├── Index.tsx      # Page d'accueil
+│   │   └── NotFound.tsx   # Page 404
+│   ├── test/               # Tests
+│   ├── App.tsx            # Composant racine
+│   └── main.tsx           # Point d'entrée
+├── tailwind.config.ts      # Configuration Tailwind
+├── vite.config.ts          # Configuration Vite
+└── package.json            # Dépendances
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prérequis
 
-**Use GitHub Codespaces**
+- **Node.js** >= 18.x
+- **npm**, **yarn** ou **bun**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Étapes d'installation
 
-## What technologies are used for this project?
+1. **Cloner le repository**
+   ```bash
+   git clone https://github.com/MaxChevalier/chronos-landing-page.git
+   cd chronos-landing-page
+   ```
 
-This project is built with:
+2. **Installer les dépendances**
+   ```bash
+   # Avec npm
+   npm install
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+   # Avec yarn
+   yarn install
 
-## How can I deploy this project?
+   # Avec bun
+   bun install
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+3. **Lancer le serveur de développement**
+   ```bash
+   npm run dev
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+4. **Ouvrir dans le navigateur**
+   ```
+   http://localhost:5173
+   ```
 
-Yes, you can!
+## 📜 Scripts Disponibles
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+| Commande | Description |
+|----------|-------------|
+| `npm run dev` | Lance le serveur de développement |
+| `npm run build` | Build de production |
+| `npm run build:dev` | Build en mode développement |
+| `npm run preview` | Prévisualise le build de production |
+| `npm run lint` | Analyse le code avec ESLint |
+| `npm run test` | Exécute les tests une fois |
+| `npm run test:watch` | Exécute les tests en mode watch |
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🎨 Personnalisation
+
+### Thème
+
+Le thème est configuré dans `tailwind.config.ts` avec des couleurs personnalisées :
+
+- **Gold** - Couleur d'accent principale (#D4AF37)
+- **Obsidian** - Couleur de fond sombre
+- **Typographie** - Playfair Display (serif) + Inter (sans-serif)
+
+### Composants UI
+
+Le projet utilise **shadcn/ui** avec plus de 50 composants disponibles dans `src/components/ui/`. Pour ajouter de nouveaux composants :
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## 🧪 Tests
+
+Le projet utilise **Vitest** et **Testing Library** pour les tests :
+
+```bash
+# Exécuter tous les tests
+npm run test
+
+# Mode watch
+npm run test:watch
+```
+
+## 📦 Build Production
+
+```bash
+# Créer le build optimisé
+npm run build
+
+# Prévisualiser le build
+npm run preview
+```
+
+Les fichiers de production seront générés dans le dossier `dist/`.
+
+## 🌐 Déploiement
+
+Le projet peut être déployé sur :
+
+- **Vercel** - `vercel deploy`
+- **Netlify** - Configuration automatique avec `netlify.toml`
+- **GitHub Pages** - Via GitHub Actions
+- **Tout hébergeur statique** - Servir le dossier `dist/`
+
+## 🤝 Contribution
+
+1. Fork le projet
+2. Créer une branche feature (`git checkout -b feature/AmazingFeature`)
+3. Commit les changements (`git commit -m 'Add: AmazingFeature'`)
+4. Push sur la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 👤 Auteur
+
+**Max Chevalier**
+
+- GitHub: [@MaxChevalier](https://github.com/MaxChevalier)
+
+---
+
+<p align="center">
+  <i>« Le temps est la chose la plus précieuse qu'un homme puisse dépenser. »</i><br>
+  <small>— Théophraste</small>
+</p>
