@@ -9,7 +9,7 @@ const destinations = [
     description: "Witness the inauguration of the Eiffel Tower and immerse yourself in the Belle Époque.",
     duration: "7 Days",
     price: "2,500 ꝭ",
-    image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80",
+    image: "https://i.imgur.com/AFb0RjA.jpeg",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const destinations = [
     description: "Meet Michelangelo as he unveils David and experience the Renaissance at its zenith.",
     duration: "5 Days",
     price: "3,200 ꝭ",
-    image: "https://images.unsplash.com/photo-1543429258-c5ca3ea3f617?w=800&q=80",
+    image: "https://i.imgur.com/PC5Ii3h.jpeg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const destinations = [
     description: "Explore the age of dinosaurs in complete safety with our temporal shield technology.",
     duration: "10 Days",
     price: "8,900 ꝭ",
-    image: "https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=800&q=80",
+    image: "https://i.imgur.com/KoyxhLI.jpeg",
   },
 ];
 
