@@ -1,121 +1,87 @@
-# QA Checklist — Chronos Time Travel Agency
+# QA Checklist — TimeTravel Agency
 
 ## 🧭 Navigation
 
-- [ ] Logo "CHRONOS" visible et cliquable
-- [ ] Lien "Destinations" fonctionne (scroll vers section)
-- [ ] Lien "About" fonctionne
-- [ ] Lien "Contact" fonctionne (scroll vers footer)
+- [ ] Logo "TimeTravel Agency" visible et cliquable
+- [ ] Lien "Destinations" fonctionne (scroll fluide vers la grille)
+- [ ] Lien "À propos" fonctionne
 - [ ] Menu mobile s'ouvre/ferme correctement
-- [ ] Navbar change d'apparence au scroll (glass effect)
+- [ ] Navbar Sticky : change d'apparence au scroll (Glassmorphism / Blur)
 
 ---
 
 ## 🦸 Section Hero
 
-- [ ] Image de fond chargée correctement
-- [ ] Texte "Chronos awaits. Where will you go?" visible
-- [ ] Animation d'entrée fluide (Framer Motion)
-- [ ] Bouton "Start Journey" cliquable
-- [ ] Bouton "Explore Eras" cliquable
-- [ ] Indicateur de scroll visible
-- [ ] Éléments décoratifs (blur dorés) animés
+- [ ] Vidéo ou Animation de fond chargée (Ambiance Time Vortex/Espace)
+- [ ] Titre Principal : "Escape the Present. Experience History." (ou équivalent)
+- [ ] Sous-titre visible et lisible
+- [ ] Animation d'entrée fluide (Fade-in / Slide-up)
+- [ ] Bouton "Start Journey" (Démarrer) cliquable
+- [ ] Action : Le bouton scrolle bien vers la section Destinations
 
 ---
 
-## 🗺️ Section Destinations
+## 🗺️ Section Destinations (Les 3 Époques)
 
-- [ ] Titre "Curated Eras" affiché
-- [ ] 3 cartes de destinations visibles :
-  - [ ] Ancient Egypt (2500 BCE)
-  - [ ] Renaissance Florence (1492 CE)
-  - [ ] Future Tokyo (2150 CE)
-- [ ] Images des destinations chargées
-- [ ] Badge année affiché sur chaque carte
-- [ ] Effet hover sur les cartes (zoom image)
-- [ ] Icônes Clock et MapPin visibles
-- [ ] Bouton "View All Destinations" présent
-- [ ] Animation staggered au scroll
+- [ ] Titre de section "Curated Eras" (ou "Nos Destinations") affiché
+- [ ] **Carte 1 : Paris 1889**
+    - [ ] Image : Tour Eiffel / Ambiance Belle Époque
+    - [ ] Tag : "Romance" / Prix affiché (~5000 ꝭ)
+- [ ] **Carte 2 : Florence 1504**
+    - [ ] Image : Renaissance / Art / Toscane
+    - [ ] Tag : "Art & History" / Prix affiché (~4500 ꝭ)
+- [ ] **Carte 3 : Crétacé -65M**
+    - [ ] Image : Dinosaures / Jungle / Fougères
+    - [ ] Tag : "Adventure" / Prix affiché (~6000 ꝭ)
+- [ ] Effet Hover : Les cartes zooment ou s'illuminent (Bordure dorée)
+- [ ] Boutons "Book Now" sur chaque carte
+
+---
+
+## 🤖 Agent IA (Chatbot Chronos)
+
+- [ ] Widget flottant visible en bas à droite (icône bulle)
+- [ ] Au clic : La fenêtre de chat s'ouvre correctement
+- [ ] Message d'accueil : "Greetings, I am Chronos..." (ou similaire)
+- [ ] Design du chat cohérent (Thème sombre + Doré)
+- [ ] Clavier : On peut taper du texte et envoyer
+- [ ] Réponse : Le bot répond (même une réponse simulée/courte)
 
 ---
 
 ## 🦶 Footer
 
-- [ ] Logo "CHRONOS" présent
-- [ ] Liens de navigation fonctionnels
-- [ ] Copyright avec année actuelle (2026)
-- [ ] Animation d'entrée au scroll
+- [ ] Copyright "TimeTravel Agency 2050"
+- [ ] Liens fictifs (Ethics, Contact) présents
+- [ ] Pas de débordement blanc en bas de page
 
 ---
 
 ## 📱 Responsive Design
 
 ### Mobile (< 640px)
-- [ ] Navigation hamburger menu
-- [ ] Hero text lisible
-- [ ] Cartes destinations en colonne
-- [ ] Boutons CTA adaptés
-- [ ] Footer centré
+- [ ] Menu Hamburger fonctionnel
+- [ ] Les 3 cartes sont empilées verticalement (1 colonne)
+- [ ] Le Widget Chatbot ne cache pas le contenu important
 
-### Tablette (640px - 1024px)
-- [ ] Layout 2 colonnes pour destinations
-- [ ] Espacement adapté
-- [ ] Menu desktop ou mobile selon taille
-
-### Desktop (> 1024px)
-- [ ] Layout 3 colonnes pour destinations
-- [ ] Navigation desktop complète
-- [ ] Effets hover visibles
+### Tablette & Desktop
+- [ ] Les cartes s'affichent en grille (3 colonnes sur grand écran)
+- [ ] Les effets de survol (Hover) fonctionnent à la souris
 
 ---
 
-## 🎨 Design & UI
+## 🎨 Design & UI (Luxe & Premium)
 
-- [ ] Palette de couleurs cohérente (or/noir)
-- [ ] Typographie Playfair Display pour titres
-- [ ] Typographie Inter pour texte
-- [ ] Gradient doré sur textes accentués
-- [ ] Glass morphism sur navbar et badges
-- [ ] Transitions fluides (300ms+)
+- [ ] Palette Respectée : Fond Sombre (Dark Mode) + Accents Dorés
+- [ ] Typographie : Titres élégants (Serif type Playfair)
+- [ ] Images : Haute qualité (pas de pixelisation)
+- [ ] Glassmorphism : Effet de transparence sur les cartes/nav
 
 ---
 
-## ⚡ Performance
+## ✍️ Validé par la Squad
 
-- [ ] Temps de chargement < 3s
-- [ ] Pas de layout shift (CLS)
-- [ ] Images optimisées
-- [ ] Animations 60fps
-- [ ] Score Lighthouse Performance > 90
-- [ ] Score Lighthouse Accessibility > 90
-
----
-
-## 🐛 Bugs & Erreurs
-
-- [ ] Aucune erreur dans la console
-- [ ] Aucun warning React
-- [ ] Pas de texte tronqué
-- [ ] Pas d'overflow horizontal
-- [ ] Tous les liens valides (pas de 404)
-
----
-
-## 🌐 Production
-
-- [ ] URL publique fonctionnelle
-- [ ] HTTPS actif
-- [ ] Meta tags présents
-- [ ] Favicon chargé
-- [ ] robots.txt accessible
-- [ ] Aucun bug critique bloquant
-
----
-
-## ✍️ Validé par
-
-| Rôle | Nom | Date | Signature |
-|------|-----|------|-----------|
-| Développeur | | | |
-| QA | | | |
-| Product Owner | | | |
+- [ ] RAYNAUD Adrien
+- [ ] PIAUGER Paul
+- [ ] CHEVALIER Maxime
+- [ ] CHABOISSIER Luca

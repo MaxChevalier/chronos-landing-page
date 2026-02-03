@@ -9,68 +9,26 @@ Documenter les prompts utilisés dans le cadre du projet afin d'assurer transpar
 ## 🧠 Prompt — Génération de la Landing Page (Vibe Coding)
 
 ```
-Create a modern and premium landing page for "Chronos", a luxury time travel agency.
+Build a responsive Single Page Landing Page for "TimeTravel Agency", a luxury time-travel service.
 
-Design requirements:
-- Dark theme with gold accents (#D4AF37)
-- Hero section with immersive background image
-- Elegant typography (Playfair Display for headings, Inter for body)
-- Smooth animations with Framer Motion
-- Glass morphism effects on navbar and UI elements
+Stack: React, Vite, Tailwind CSS, Lucide-React (icons), Framer Motion.
 
-Sections:
-1. Hero: "Chronos awaits. Where will you go?" tagline, CTA buttons
-2. Destinations: 3 interactive cards (Ancient Egypt 2500 BCE, Renaissance Florence 1492 CE, Future Tokyo 2150 CE)
-3. Footer with navigation links
+Structure:
+Navbar: Sticky, blurred background. Logo left, Links (Destinations, About, Contact) right.
+Hero Section: Full screen height (100vh).
+Headline: "Chronos awaits. Where will you go?"
+Subtext: "The ultimate luxury travel experience across history."
+Primary Button: "Start Journey" (Gold color).
+Destinations Grid: A section titled "Curated Eras" with a grid of 3 cards (placeholders for now).
+Footer: Simple dark footer with copyright.
 
-Technical stack:
-- React 18 + TypeScript
-- Vite
-- TailwindCSS
-- Framer Motion
-- shadcn/ui components
-
-Responsive, mobile-first approach.
+Design System:
+Background: Very dark grey/almost black (#0a0a0a).
+Text: White and Gold (#D4AF37) for accents.
+Fonts: Serif for headings (elegant), Sans-serif for body.
 ```
 
-**Outil** : Lovable / Bolt.new / v0.dev  
-**Modèle** : Claude Sonnet 3.5
-
----
-
-## 🎨 Prompt — Raffinement du Design
-
-```
-Enhance the Chronos landing page with:
-- Floating decorative elements with gold blur effect
-- Scroll indicator animation in hero section
-- Staggered card animations on scroll
-- Hover effects on destination cards (image zoom, text color change)
-- Glass effect on navbar when scrolling
-- Gradient text for accent headlines
-```
-
-**Modèle** : Claude Sonnet 3.5
-
----
-
-## 📝 Prompt — Génération du Contenu
-
-```
-Write compelling copy for a luxury time travel agency landing page called "Chronos".
-
-Tone: Elegant, mysterious, exclusive, inspiring wanderlust across time.
-
-Content needed:
-1. Hero tagline and subtext
-2. Destination descriptions for:
-   - Ancient Egypt (Pyramids, Pharaohs)
-   - Renaissance Florence (Da Vinci, Art)
-   - Future Tokyo (2150 CE, futuristic megacity)
-3. Call-to-action button text
-```
-
-**Modèle** : Claude / GPT-4
+**Outil** : Lovable 
 
 ---
 
