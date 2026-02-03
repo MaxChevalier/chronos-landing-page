@@ -114,8 +114,7 @@
 
 ## ✍️ Validé par
 
-| Rôle | Nom | Date | Signature |
-|------|-----|------|-----------|
-| Développeur | | | |
-| QA | | | |
-| Product Owner | | | |
+-   RAYNAUD Adrien
+-   PIAUGER Paul
+-   CHEVALIER Maxime
+-   CHABOISSIER Luca
